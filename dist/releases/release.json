@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "channel": "stable",
-  "version": "0.1.1",
-  "filename": "appliance-app-0.1.1.tar.gz",
-  "sha256": "7a7f58ae7cc87bc1cc2e21f7d426246db31f3d3e905699f0476a7fa2b196fd73",
-  "size": 2477
+  "version": "0.1.2",
+  "filename": "appliance-app-0.1.2.tar.gz",
+  "sha256": "ce4825bdbef015651d74c8215e68fbe92715a6223e2827c4a5f20a793ce27b99",
+  "size": 2507
 }

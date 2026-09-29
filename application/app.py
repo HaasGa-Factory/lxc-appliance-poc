@@ -84,7 +84,7 @@ body{{font:16px system-ui,sans-serif;background:#111827;color:#e5e7eb;margin:0;d
 main{{width:min(34rem,calc(100% - 3rem));background:#1f2937;padding:2rem;border-radius:.75rem}}
 h1{{font-size:1.45rem;margin:0 0 .5rem}} .status{{color:#4ade80;font-weight:700;margin:0 0 1.5rem}}
 dl{{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1rem;margin:0}}dt{{color:#9ca3af}}dd{{margin:0;text-align:right}}
-</style></head><body><main><h1>LXC APPLIANCE POC</h1><p class="status">OPERATIONAL</p><dl>{rows}</dl></main></body></html>"""
+</style></head><body><main><h1>LXC APPLIANCE POC</h1><p class="status">OPERATIONAL — GITHUB UPDATE OK</p><dl>{rows}</dl></main></body></html>"""
         self.send_text(200, page, "text/html")
 
     def log_message(self, fmt: str, *args: object) -> None:

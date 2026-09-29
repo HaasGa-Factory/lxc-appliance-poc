@@ -34,6 +34,7 @@ class AppTest(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertIn("LXC APPLIANCE POC", body)
         self.assertIn("OPERATIONAL", body)
+        self.assertIn("GITHUB UPDATE OK", body)
         self.assertEqual(self.get("/missing")[0], 404)
 
 

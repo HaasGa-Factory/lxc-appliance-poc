@@ -184,3 +184,23 @@ Un nouveau LXC créé depuis l'ancien `.tar.zst` installera cette nouvelle versi
 
 Le POC n'implémente volontairement ni auto-update, ni Git dans le template, ni Docker, ni base de
 données. La validation finale reste un essai réel sur un nœud Proxmox VE.
+
+## Test de mise à jour depuis GitHub
+
+Les fichiers signés stables sont publiés dans `dist/releases` et accessibles à l'adresse :
+
+```text
+https://raw.githubusercontent.com/HaasGa-Factory/lxc-appliance-poc/main/dist/releases
+```
+
+Dans un LXC déjà installé, remplacer l'URL locale puis rejouer volontairement le bootstrap :
+
+```bash
+sed -i 's|^RELEASE_BASE_URL=.*|RELEASE_BASE_URL=https://raw.githubusercontent.com/HaasGa-Factory/lxc-appliance-poc/main/dist/releases|' /etc/appliance/appliance.conf
+rm -f /var/lib/appliance/installed
+systemctl restart appliance-firstboot
+journalctl -u appliance-firstboot -f
+```
+
+Le bootstrap conserve les contrôles de signature minisign, taille, SHA256 et santé HTTP. Ce POC teste
+une mise à jour déclenchée manuellement ; il n'active pas encore de mise à jour automatique planifiée.
