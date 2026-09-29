@@ -1,0 +1,23 @@
+[Unit]
+Description=LXC Appliance POC web service
+After=network.target
+
+[Service]
+Type=simple
+User=appliance
+Group=appliance
+ExecStart=/usr/bin/python3 /opt/appliance/app.py
+Restart=on-failure
+RestartSec=5s
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target
+

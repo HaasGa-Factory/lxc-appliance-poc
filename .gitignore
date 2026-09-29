@@ -1,0 +1,8 @@
+dist/*
+!dist/releases/
+!dist/releases/*.tar.gz
+!dist/releases/release.json
+!dist/releases/release.json.sig
+__pycache__/
+*.pyc
+keys/*.key

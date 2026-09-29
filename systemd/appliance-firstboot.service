@@ -1,0 +1,18 @@
+[Unit]
+Description=Install LXC Appliance on first boot
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=!/var/lib/appliance/installed
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/appliance-bootstrap/firstboot.sh
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=60s
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target
+
