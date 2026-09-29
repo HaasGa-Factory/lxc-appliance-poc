@@ -1,7 +1,9 @@
 import sys
 import threading
 import unittest
+from unittest.mock import patch
 from http.client import HTTPConnection
+import json
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "application"))
@@ -35,6 +37,15 @@ class AppTest(unittest.TestCase):
         self.assertIn("LXC APPLIANCE POC", body)
         self.assertIn("OPERATIONAL", body)
         self.assertIn("GITHUB UPDATE OK", body)
+        self.assertIn("Vérifier les mises à jour", body)
+        with patch("app.latest_release", return_value="9.9.9"):
+            status, body = self.get("/check-update")
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(body), {
+            "current": version,
+            "latest": "9.9.9",
+            "update_available": True,
+        })
         self.assertEqual(self.get("/missing")[0], 404)
 
 

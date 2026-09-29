@@ -53,7 +53,7 @@ ls -l dist/releases/
 Publier ces trois fichiers, sans les renommer :
 
 ```text
-appliance-app-0.1.3.tar.gz
+appliance-app-1.1.5.tar.gz
 release.json
 release.json.sig
 ```
@@ -183,7 +183,7 @@ Un nouveau LXC créé depuis l'ancien `.tar.zst` installera cette nouvelle versi
 `release.json` sans le signer de nouveau provoque un refus avant tout téléchargement applicatif.
 
 Le POC n'implémente volontairement ni auto-update, ni Git dans le template, ni Docker, ni base de
-données. La validation finale reste un essai réel sur un nœud Proxmox VE.
+données. L'interface propose seulement une vérification manuelle de la dernière release signée.
 
 ## Test de mise à jour depuis GitHub
 
