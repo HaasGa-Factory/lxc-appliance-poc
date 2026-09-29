@@ -1,4 +1,4 @@
 untrusted comment: signature from minisign secret key
-RUTG2Ki0AYEiXtPkfFbeo4WnPdqdOrBb+FDWyYBojD1xJzSHrUokQV9Kc3DY1VYYUuQ8DaICArcYIIt368cwEz80wpOgKNIcYAk=
-trusted comment: LXC appliance stable release 0.1.2
-ThvEU/2RSxZZOCFkcneYeuJMP1UA1+V2zjyKPPKRQ/VNnY1tPvaO3XgYky8cIr3jsdDtZom63MEBsZBD0le+Dg==
+RUTG2Ki0AYEiXqVTdXWsNWvU53K1rMnhnxrIUiyQFFf9WY9c7eBqOFeGfvukomAUhUcgJ/Ux9XJb6EEaiKIU4rB3Z0gtZ58NZAY=
+trusted comment: LXC appliance stable release 0.1.3
+SYLDgkrqLbnr5mYDTvEA5bmtI2vGxtfqye5p3kXFGUbxHNpnlzOmEEhfbdBnpJe++XdB1B8KBGfqFEW18h5CCQ==

@@ -26,6 +26,7 @@ install -d -o root -g root -m 0755 /var/lib/appliance
 printf '%s\n' "${APPLIANCE_BOOTSTRAP_VERSION:-unknown}" > /var/lib/appliance/bootstrap-version
 
 systemctl daemon-reload
-systemctl enable --now appliance.service
+systemctl enable appliance.service
+systemctl restart appliance.service
 echo "[OK] Application"
 echo "[OK] Service"

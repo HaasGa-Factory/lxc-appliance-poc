@@ -53,7 +53,7 @@ ls -l dist/releases/
 Publier ces trois fichiers, sans les renommer :
 
 ```text
-appliance-app-0.1.1.tar.gz
+appliance-app-0.1.3.tar.gz
 release.json
 release.json.sig
 ```
